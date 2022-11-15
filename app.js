@@ -1,0 +1,11 @@
+const express=require('express')
+const cors=require('cors')
+const app=express()
+const mapinfo=require('./router/mapInfo')
+const getAllInfo=require('./getAllInfo')
+app.use(cors())
+app.use('/api/curconfirm',getAllInfo)
+app.use('/api',mapinfo)
+app.listen(3005,()=>{
+    console.log('serve success run http:127.0.0.1:3005')
+})

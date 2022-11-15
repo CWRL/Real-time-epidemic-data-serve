@@ -1,0 +1,10 @@
+const express=require('express')
+const router=express.Router()
+const map=require('../router_hander/mapinfo')
+router.get('/maponeinfo',map.maponeinfo_hander)
+router.get('/curconfirm',map.getcurconfime_hander)
+router.get('/getTime',map.getTime_hander)
+router.get('/getcityinfo',map.getcityinfo_hander)
+router.get('/getarea',map.getareainfo_hander)
+router.get('/getdanger',map.getdangerinfo_hander)
+module.exports=router
